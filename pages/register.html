@@ -36,23 +36,36 @@
         <br>
         
         <div class="container">
-            <form>
+            <form id="register-form">
                 <div class="form-group">
-                <label for="email-input">Email address</label>
-                <input type="email" class="form-control" id="email-input" placeholder="Enter email">
+                <label for="email-register">Email address</label>
+                <input type="email" class="form-control" id="email-register" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                <label for="username-input">Username</label>
-                <input type="text" class="form-control" id="username-input" placeholder="Enter username">
+                <label for="username-register">Username</label>
+                <input type="text" class="form-control" id="username-register" placeholder="Enter username">
                 </div>
                 <div class="form-group">
-                <label for="pass-input">Password</label>
-                <input type="password" class="form-control" id="pass-input" placeholder="Password">
+                <label for="pass-register">Password</label>
+                <input type="password" class="form-control" id="pass-register" placeholder="Password">
                 </div>
                 <button type="submit" id="register-submit" class="btn btn-primary">Submit</button>
             </form>
 
+            <form id="login-form">
+              <div class="form-group">
+              <label for="username-login">Username</label>
+              <input type="text" class="form-control" id="username-login" placeholder="Enter username">
+              </div>
+              <div class="form-group">
+              <label for="pass-login">Password</label>
+              <input type="password" class="form-control" id="pass-login" placeholder="Password">
+              </div>
+              <button type="submit" id="login-submit" class="btn btn-primary">Submit</button>
+            </form>
+
             <div id="message"></div>
+            <div id="switchSignup"></div>
         </div>
     </body>
 </html>
