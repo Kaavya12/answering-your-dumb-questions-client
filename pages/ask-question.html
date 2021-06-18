@@ -7,9 +7,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="../scripts/register.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+        <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+        <script src="../scripts/ask-question.js" defer></script>
         <script src="../scripts/navbar.js" defer></script>
-
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -20,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="./ask-question.html">Ask a Question</a>
+                  <a class="nav-link" href="#">Ask a Question</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./search-question.html">Search for Questions</a>
@@ -29,7 +30,7 @@
                   <a class="nav-link" href="#">Rules/Guideline for Usage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="signup-nav" href="#">Sign Up/Log In</a>
+                    <a class="nav-link" id="signup-nav" href="./register.html"></a>
                   </li>
               </ul>
             </div>
@@ -38,36 +39,32 @@
         <br>
         
         <div class="container">
-            <form id="register-form">
+            <div class="jumbotron" id="main">
+              
+              <h3 id="question-user"></h3>
+              <form id="ask-question-form">
                 <div class="form-group">
-                <label for="email-register">Email address</label>
-                <input type="email" class="form-control" id="email-register" placeholder="Enter email">
+                  <label for="question-box">Enter your question</label>
+                  <input type="text" class="form-control" id="question-box" placeholder="Question">
+                </div>
+                <div class="form-group"> 
+                  <label for="choices-multiple-remove-button"> Choose a category: </label>
+                  <select id="choices-multiple-remove-button" placeholder="Select upto 5 categories" multiple>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="science-general">General Science</option>
+                    <option value="technology">Technology</option>
+                    <option value="other">Other</option>
+                  </select> 
                 </div>
                 <div class="form-group">
-                <label for="username-register">Username</label>
-                <input type="text" class="form-control" id="username-register" placeholder="Enter username">
+                  <label for="answer-type">What kind of answer are you looking for?</label>
+                  <input type="text" class="form-control" id="answer-type" placeholder="Answer types could be experimental, theoretical or any specific details you have in mind">
                 </div>
-                <div class="form-group">
-                <label for="pass-register">Password</label>
-                <input type="password" class="form-control" id="pass-register" placeholder="Password">
-                </div>
-                <button type="submit" id="register-submit" class="btn btn-primary">Submit</button>
-            </form>
-
-            <form id="login-form">
-              <div class="form-group">
-              <label for="username-login">Username</label>
-              <input type="text" class="form-control" id="username-login" placeholder="Enter username">
-              </div>
-              <div class="form-group">
-              <label for="pass-login">Password</label>
-              <input type="password" class="form-control" id="pass-login" placeholder="Password">
-              </div>
-              <button type="submit" id="login-submit" class="btn btn-primary">Submit</button>
-            </form>
-
-            <div id="message"></div>
-            <div id="switchSignup"></div>
+                <button class="btn btn-primary" type="submit">Submit your question</button>
+              </form>
+            </div>
         </div>
     </body>
 </html>
