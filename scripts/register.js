@@ -1,4 +1,4 @@
-const database_url = "http://localhost:8081"
+const database_url = "https://clover-ancient-dryosaurus.glitch.me"
 
 document.addEventListener('DOMContentLoaded', () => {
     let signup = true;
